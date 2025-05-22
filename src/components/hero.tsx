@@ -9,12 +9,11 @@ export function Hero({ featurePoints }: HeroProps) {
         <div className="flex flex-col md:flex-row md:w-[1124px] w-full md:relative">
             {/* Left content column */}
             <div className="w-full md:w-[516px] order-2 md:order-1 md:mt-8 z-20">
-                <h2 className="text-2xl md:text-[35px] font-bold leading-tight font-urbanist">
+                <h2 className="text-center md:text-left text-[25px] md:text-[35px] font-black md:font-bold font-urbanist">
                     Want to Turn Social Media Into a Profitable Career?
                 </h2>
-
                 <h3
-                    className="text-xl md:text-[35px] font-bold text-aqua font-urbanist mb-3"
+                    className="text-center md:text-left text-[25px] md:text-[35px] font-black md:font-bold text-aqua font-urbanist mb-3"
                     style={{
                         textShadow: "0 4px 8px var(--color-folly)",
                     }}
