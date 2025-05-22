@@ -6,9 +6,9 @@ import banner from "@/assets/images/banner.png";
 
 export function Hero({ featurePoints }: HeroProps) {
     return (
-        <div className="flex flex-col md:flex-row md:items-start gap-y-5 relative">
+        <div className="flex flex-col md:flex-row md:w-[1124px] w-full md:relative">
             {/* Left content column */}
-            <div className="w-full md:w-[calc(50%-48px)] order-2 md:order-1 md:mt-8 relative z-20">
+            <div className="w-full md:w-[516px] order-2 md:order-1 md:mt-8 z-20">
                 <h2 className="text-2xl md:text-[35px] font-bold leading-tight font-urbanist">
                     Want to Turn Social Media Into a Profitable Career?
                 </h2>
@@ -41,10 +41,9 @@ export function Hero({ featurePoints }: HeroProps) {
                         <div className="max-w-[350px] md:max-w-[313px] w-full">
                             <Link
                                 href="#"
-                                className="inline-flex justify-center items-center w-full bg-amaranth-600 text-white text-xl font-bold py-3 rounded-lg transition-all duration-300"
+                                className="inline-flex justify-center items-center w-full bg-folly text-white text-xl font-bold py-3 rounded-lg transition-all duration-300"
                                 style={{
-                                    boxShadow:
-                                        "0 0 15px var(--color-turquoise-blue-400)",
+                                    boxShadow: "0 0 15px var(--color-aqua)",
                                 }}
                                 aria-label="Get started with Fametonic"
                             >
@@ -94,12 +93,12 @@ export function Hero({ featurePoints }: HeroProps) {
             </div>
 
             {/* Right image column */}
-            <div className="w-full md:w-[calc(50%+48px)] order-1 md:order-2">
+            <div className="md:absolute md:w-[666px] md:h-[679px] md:overflow-hidden md:right-0 md:-top-13">
                 <Image
                     src={banner}
                     alt="Fametonic App Dashboard"
-                    width={700}
-                    height={600}
+                    width={666}
+                    height={679}
                     className="max-w-full w-full h-auto mx-auto relative z-10"
                 />
             </div>

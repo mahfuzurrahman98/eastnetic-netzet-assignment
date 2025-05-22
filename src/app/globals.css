@@ -2,35 +2,7 @@
 
 @theme {
     --color-aqua: #00e7f9;
-    --color-turquoise-blue-50: #eafffe;
-    --color-turquoise-blue-100: #cbfffe;
-    --color-turquoise-blue-200: #9effff;
-    --color-turquoise-blue-300: #5bfbff;
-    --color-turquoise-blue-400: #00e7f9;
-    --color-turquoise-blue-500: #00d0e5;
-    --color-turquoise-blue-600: #00a6c0;
-    --color-turquoise-blue-700: #03839b;
-    --color-turquoise-blue-800: #0d697d;
-    --color-turquoise-blue-900: #105669;
-    --color-turquoise-blue-950: #033949;
-
     --color-folly: #fc004e;
-    --color-amaranth-50: #ffeff1;
-    --color-amaranth-100: #ffe0e6;
-    --color-amaranth-200: #ffc6d3;
-    --color-amaranth-300: #ff97ae;
-    --color-amaranth-400: #ff5d85;
-    --color-amaranth-500: #ff2460;
-    --color-amaranth-600: #fc004e;
-    --color-amaranth-700: #d70042;
-    --color-amaranth-800: #b40040;
-    --color-amaranth-900: #99023e;
-    --color-amaranth-950: #57001c;
-
-    /* Shadow utilities */
-    --shadow-folly: 0 0 15px var(--color-folly);
-    --shadow-aqua: 0 0 15px var(--color-aqua);
-    --text-shadow-folly: 0 0 10px var(--color-folly);
 
     /* Font utilities */
     --font-figtree: var(--font-figtree);

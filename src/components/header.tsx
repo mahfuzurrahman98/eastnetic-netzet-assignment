@@ -14,7 +14,7 @@ export function Header({ announcement, navLinks }: HeaderProps) {
             <Banner announcement={announcement} />
 
             {/* Desktop Navbar */}
-            <div className="max-w-6xl w-full px-4 md:px-0 mx-auto hidden md:block mt-6">
+            <div className="max-w-[1124px] w-full px-4 md:px-0 mx-auto hidden md:block mt-6">
                 <nav className="py-6 flex items-start justify-between">
                     <div className="flex items-center">
                         <Link
@@ -32,7 +32,7 @@ export function Header({ announcement, navLinks }: HeaderProps) {
                     </div>
 
                     {/* Desktop navigation links */}
-                    <div className="flex items-center space-x-8 pr-20 font-semibold text-lg">
+                    <div className="flex items-center space-x-8 pr-26 font-semibold text-lg">
                         {navLinks.map((link: NavLink, index: number) => (
                             <Link
                                 key={index}
