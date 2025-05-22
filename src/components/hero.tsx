@@ -1,10 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
     return (
         <div className="mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 md:justify-between md:items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:justify-between md:items-start gap-y-5">
                 {/* Left content column */}
                 <div className="w-full order-2 md:order-1">
                     <h2 className="text-2xl md:text-4xl font-bold leading-tight font-urbanist mb-2">
@@ -63,51 +64,58 @@ export function Hero() {
                     </div>
 
                     {/* CTA Button with Terms */}
-                    <div className="flex flex-col gap-y-10 mt-6">
-                        <div className="order-2 md:order-1 max-w-[350px] md:max-w-[313px] w-full">
-                            <a
-                                href="#"
-                                className="inline-flex justify-center items-center w-full bg-amaranth-600 text-white text-xl font-bold py-3 rounded-lg transition-all duration-300"
-                                style={{
-                                    boxShadow:
-                                        "0 0 15px var(--color-turquoise-blue-400)",
-                                }}
-                                aria-label="Get started with Fametonic"
-                            >
-                                <span className="flex items-center justify-center">
-                                    GET STARTED
-                                    <ArrowRight className="ml-2" size={20} />
-                                </span>
-                            </a>
-                            <p className="text-xs text-center text-gray-400 mt-2">
-                                1-minute quiz for personalized Insights
-                            </p>
+                    <div className="flex flex-col justify-center gap-y-10 mt-6">
+                        <div className="order-2 md:order-1 flex flex-col items-center md:items-start">
+                            {/* CTA Button */}
+                            <div className="max-w-[350px] md:max-w-[313px] w-full">
+                                <Link
+                                    href="#"
+                                    className="inline-flex justify-center items-center w-full bg-amaranth-600 text-white text-xl font-bold py-3 rounded-lg transition-all duration-300"
+                                    style={{
+                                        boxShadow:
+                                            "0 0 15px var(--color-turquoise-blue-400)",
+                                    }}
+                                    aria-label="Get started with Fametonic"
+                                >
+                                    <span className="flex items-center justify-center">
+                                        GET STARTED
+                                        <ArrowRight
+                                            className="ml-2"
+                                            size={20}
+                                        />
+                                    </span>
+                                </Link>
+                                {/* Hints */}
+                                <p className="text-xs text-center text-gray-400 mt-2">
+                                    1-minute quiz for personalized Insights
+                                </p>
+                            </div>
                         </div>
 
                         {/* Footer */}
-                        <div className="order-1 md:order-2 text-center md:text-left text-gray-400">
+                        <div className="order-1 md:order-2 text-center md:text-left text-gray-400 px-8 md:px-0">
                             <p className="text-xs">
                                 By clicking "Get Started", you agree with{" "}
-                                <a
+                                <Link
                                     href="#"
                                     className="text-gray-400 hover:underline"
                                 >
                                     Terms and Conditions
-                                </a>
+                                </Link>
                                 ,{" "}
-                                <a
+                                <Link
                                     href="#"
                                     className="text-gray-400 hover:underline"
                                 >
                                     Privacy Policy
-                                </a>
+                                </Link>
                                 ,{" "}
-                                <a
+                                <Link
                                     href="#"
                                     className="text-gray-400 hover:underline"
                                 >
                                     Subscription Terms
-                                </a>
+                                </Link>
                             </p>
 
                             <p className="text-xs mt-4">

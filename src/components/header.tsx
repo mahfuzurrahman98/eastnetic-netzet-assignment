@@ -2,6 +2,7 @@
 
 import { Menu } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Header() {
     return (
@@ -45,18 +46,18 @@ export function Header() {
 
                     {/* Desktop navigation */}
                     <div className="hidden md:flex items-center space-x-8 pr-8 font-semibold text-lg">
-                        <a
-                            href="/about"
+                        <Link
+                            href="#"
                             className="text-gray-300 hover:text-aqua transition-colors"
                         >
                             About us
-                        </a>
-                        <a
-                            href="/contact"
+                        </Link>
+                        <Link
+                            href="#"
                             className="text-gray-300 hover:text-aqua transition-colors"
                         >
                             Contact
-                        </a>
+                        </Link>
                     </div>
                 </nav>
             </div>
