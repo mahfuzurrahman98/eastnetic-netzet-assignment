@@ -6,6 +6,7 @@ import { NavLink } from "@/utils/interfaces/nav-link";
 import { HeaderProps } from "@/utils/interfaces/component-props";
 import Image from "next/image";
 import Link from "next/link";
+import logo from "@/assets/images/logo.svg";
 
 export function Header({ announcement, navLinks }: HeaderProps) {
     return (
@@ -21,7 +22,7 @@ export function Header({ announcement, navLinks }: HeaderProps) {
                             className="flex items-center cursor-pointer w-[173px] h-[74px]"
                         >
                             <Image
-                                src="/images/logo.svg"
+                                src={logo}
                                 alt="Fametonic Logo"
                                 width={173}
                                 height={74}
@@ -57,7 +58,7 @@ export function Header({ announcement, navLinks }: HeaderProps) {
                             className="flex items-center cursor-pointer w-[108px] h-[46px]"
                         >
                             <Image
-                                src="/images/logo.svg"
+                                src={logo}
                                 alt="Fametonic Logo"
                                 width={108}
                                 height={46}

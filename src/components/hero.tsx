@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { HeroProps } from "@/utils/interfaces/component-props";
 import Image from "next/image";
 import Link from "next/link";
+import banner from "@/assets/images/banner.png";
 
 export function Hero({ featurePoints }: HeroProps) {
     return (
@@ -95,7 +96,7 @@ export function Hero({ featurePoints }: HeroProps) {
             {/* Right image column */}
             <div className="w-full md:w-[calc(50%+48px)] order-1 md:order-2">
                 <Image
-                    src="/images/banner.png"
+                    src={banner}
                     alt="Fametonic App Dashboard"
                     width={700}
                     height={600}
