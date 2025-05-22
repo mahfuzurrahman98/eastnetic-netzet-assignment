@@ -4,15 +4,15 @@ import Link from "next/link";
 
 export function Hero({ featurePoints }: { featurePoints: string[] }) {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 md:justify-between md:items-start gap-y-5">
+        <div className="flex flex-col md:flex-row md:items-start gap-y-5 relative">
             {/* Left content column */}
-            <div className="w-full order-2 md:order-1 md:mt-8">
-                <h2 className="text-2xl md:text-4xl font-bold leading-tight font-urbanist mb-2">
+            <div className="w-full md:w-[calc(50%-48px)] order-2 md:order-1 md:mt-8 relative z-20">
+                <h2 className="text-2xl md:text-[35px] font-bold leading-tight font-urbanist">
                     Want to Turn Social Media Into a Profitable Career?
                 </h2>
 
                 <h3
-                    className="text-xl md:text-4xl font-bold text-aqua font-urbanist mb-3"
+                    className="text-xl md:text-[35px] font-bold text-aqua font-urbanist mb-3"
                     style={{
                         textShadow: "0 4px 8px var(--color-folly)",
                     }}
@@ -21,7 +21,7 @@ export function Hero({ featurePoints }: { featurePoints: string[] }) {
                 </h3>
 
                 {/* Feature Points */}
-                <div className="space-y-4 mb-5">
+                <div className="space-y-2 mb-5 font-semibold">
                     {featurePoints.map((feature: string, index: number) => (
                         <div key={index} className="flex items-start">
                             <span className="text-amaranth-500 text-lg mr-3">
@@ -33,7 +33,7 @@ export function Hero({ featurePoints }: { featurePoints: string[] }) {
                 </div>
 
                 {/* CTA Button with Terms */}
-                <div className="flex flex-col justify-center gap-y-10 mt-6">
+                <div className="flex flex-col justify-center gap-y-8 mt-6">
                     <div className="order-2 md:order-1 flex flex-col items-center md:items-start">
                         {/* CTA Button */}
                         <div className="max-w-[350px] md:max-w-[313px] w-full">
@@ -59,7 +59,7 @@ export function Hero({ featurePoints }: { featurePoints: string[] }) {
                     </div>
 
                     {/* Footer */}
-                    <div className="order-1 md:order-2 text-center md:text-left text-gray-400 px-8 md:px-0">
+                    <div className="order-1 md:order-2 text-center md:text-left text-gray-400 font-medium px-8 md:px-0">
                         <p className="text-xs">
                             By clicking "Get Started", you agree with{" "}
                             <Link
@@ -84,7 +84,7 @@ export function Hero({ featurePoints }: { featurePoints: string[] }) {
                             </Link>
                         </p>
 
-                        <p className="text-xs mt-4">
+                        <p className="text-[10px] mt-4">
                             Fametonic 2025 ©All Rights Reserved.
                         </p>
                     </div>
@@ -92,13 +92,13 @@ export function Hero({ featurePoints }: { featurePoints: string[] }) {
             </div>
 
             {/* Right image column */}
-            <div className="w-full order-1 md:order-2 -inset-1">
+            <div className="w-full md:w-[calc(50%+48px)] order-1 md:order-2">
                 <Image
                     src="/images/banner.png"
                     alt="Fametonic App Dashboard"
                     width={700}
                     height={600}
-                    className="max-w-[700px] w-full h-auto mx-auto relative z-10"
+                    className="max-w-full w-full h-auto mx-auto relative z-10"
                 />
             </div>
         </div>
