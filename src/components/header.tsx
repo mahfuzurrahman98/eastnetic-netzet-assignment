@@ -1,26 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
+import { Banner } from "./banner";
+import { NavLink } from "@/utils/interfaces/nav-link";
+import { HeaderProps } from "@/utils/interfaces/component-props";
 import Image from "next/image";
 import Link from "next/link";
-import { Banner } from "./banner";
-import { Announcement } from "@/utils/interfaces/announcement";
-import { NavLink } from "@/utils/interfaces/nav-link";
 
-export function Header({
-    announcement,
-    navLinks,
-}: {
-    announcement: Announcement;
-    navLinks: NavLink[];
-}) {
+export function Header({ announcement, navLinks }: HeaderProps) {
     return (
         <header className="w-full">
-            <Banner
-                title={announcement.title}
-                description={announcement.description}
-            />
+            <Banner announcement={announcement} />
 
             {/* Desktop Navbar */}
             <div className="max-w-6xl w-full px-4 md:px-0 mx-auto hidden md:block mt-6">

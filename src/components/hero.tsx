@@ -1,8 +1,9 @@
 import { ArrowRight } from "lucide-react";
+import { HeroProps } from "@/utils/interfaces/component-props";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Hero({ featurePoints }: { featurePoints: string[] }) {
+export function Hero({ featurePoints }: HeroProps) {
     return (
         <div className="flex flex-col md:flex-row md:items-start gap-y-5 relative">
             {/* Left content column */}
