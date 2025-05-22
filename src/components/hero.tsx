@@ -8,12 +8,12 @@ export function Hero({ featurePoints }: HeroProps) {
     return (
         <div className="flex flex-col md:flex-row md:w-[1124px] w-full md:relative">
             {/* Left content column */}
-            <div className="w-full md:w-[516px] order-2 md:order-1 md:mt-8 z-20">
-                <h2 className="text-center md:text-left text-[25px] md:text-[35px] font-black md:font-bold font-urbanist">
+            <div className="w-full md:w-[516px] order-2 md:order-1 md:mt-9 z-20">
+                <h2 className="text-center md:text-left text-[25px] md:text-[35px] leading-8 md:leading-10 font-black md:font-bold font-urbanist tracking-normal">
                     Want to Turn Social Media Into a Profitable Career?
                 </h2>
                 <h3
-                    className="text-center md:text-left text-[25px] md:text-[35px] font-black md:font-bold text-aqua font-urbanist mb-3"
+                    className="text-center md:text-left text-[25px] md:text-[35px] leading-8 md:leading-10 font-black md:font-bold text-aqua font-urbanist mb-3"
                     style={{
                         textShadow: "0 4px 8px var(--color-folly)",
                     }}
@@ -22,13 +22,14 @@ export function Hero({ featurePoints }: HeroProps) {
                 </h3>
 
                 {/* Feature Points */}
-                <div className="space-y-2 mb-5 font-semibold">
+                <div className="space-y-2 mb-5">
                     {featurePoints.map((feature: string, index: number) => (
-                        <div key={index} className="flex items-start">
-                            <span className="text-amaranth-500 text-lg mr-3">
-                                ✨
-                            </span>
-                            <p className="text-white">{feature}</p>
+                        <div
+                            key={index}
+                            className="flex items-start font-medium md:font-semibold text-base leading-[22px]"
+                        >
+                            <span className="mr-3">✨</span>
+                            <p className="text-white ">{feature}</p>
                         </div>
                     ))}
                 </div>
@@ -40,7 +41,7 @@ export function Hero({ featurePoints }: HeroProps) {
                         <div className="max-w-[350px] md:max-w-[313px] w-full">
                             <Link
                                 href="#"
-                                className="inline-flex justify-center items-center w-full bg-folly text-white text-xl font-bold py-3 rounded-lg transition-all duration-300"
+                                className="h-[40px] inline-flex justify-center items-center w-full bg-folly text-white text-xl font-bold py-3 rounded-lg transition-all duration-300"
                                 style={{
                                     boxShadow: "0 0 15px var(--color-aqua)",
                                 }}
