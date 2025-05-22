@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Hero() {
+export function Hero({ featurePoints }: { featurePoints: string[] }) {
     return (
         <div className="mt-10">
             <div className="grid grid-cols-1 md:grid-cols-2 md:justify-between md:items-start gap-y-5">
@@ -23,44 +23,14 @@ export function Hero() {
 
                     {/* Feature Points */}
                     <div className="space-y-4 mb-5">
-                        <div className="flex items-start">
-                            <span className="text-amaranth-500 text-lg mr-3">
-                                ✨
-                            </span>
-                            <p className="text-white">
-                                Start growing your influence right away—no
-                                waiting required!
-                            </p>
-                        </div>
-
-                        <div className="flex items-start">
-                            <span className="text-amaranth-500 text-lg mr-3">
-                                ✨
-                            </span>
-                            <p className="text-white">
-                                Create viral TikToks and Reels step by step with
-                                easy-to-follow lessons
-                            </p>
-                        </div>
-
-                        <div className="flex items-start">
-                            <span className="text-amaranth-500 text-lg mr-3">
-                                ✨
-                            </span>
-                            <p className="text-white">
-                                Use a Personal AI Worker to boost your content
-                            </p>
-                        </div>
-
-                        <div className="flex items-start">
-                            <span className="text-amaranth-500 text-lg mr-3">
-                                ✨
-                            </span>
-                            <p className="text-white">
-                                Learn from expert-led courses designed for
-                                aspiring influencers
-                            </p>
-                        </div>
+                        {featurePoints.map((feature: string, index: number) => (
+                            <div key={index} className="flex items-start">
+                                <span className="text-amaranth-500 text-lg mr-3">
+                                    ✨
+                                </span>
+                                <p className="text-white">{feature}</p>
+                            </div>
+                        ))}
                     </div>
 
                     {/* CTA Button with Terms */}

@@ -3,24 +3,18 @@
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Banner } from "./banner";
+import { navLinks } from "@/lib/data";
+import { Announcement } from "@/utils/interfaces/announcement";
+import { NavLink } from "@/utils/interfaces/nav-link";
 
-export function Header() {
+export function Header({ announcement }: { announcement: Announcement }) {
     return (
         <header className="w-full">
-            <div className="bg-gradient-to-r from-[#FC004E] to-[#10CBE0] w-full">
-                {/* Banner announcement */}
-                <div className="max-w-7xl w-full mx-auto py-2 px-4 text-center">
-                    <p className="text-base md:text-[22px] font-figtree font-extrabold">
-                        <span className="mr-2">🎉</span>
-                        <span className="text-aqua mr-2">
-                            FRESH BEGINNINGS SALE:
-                        </span>
-                        {/* <span className="text-white"> */}
-                        Extra 25% OFF, Limited Spots - start your journey today!
-                        {/* </span> */}
-                    </p>
-                </div>
-            </div>
+            <Banner
+                title={announcement.title}
+                description={announcement.description}
+            />
 
             <div className="max-w-7xl w-full px-4 md:px-0 mx-auto">
                 {/* Navigation */}
@@ -46,18 +40,15 @@ export function Header() {
 
                     {/* Desktop navigation */}
                     <div className="hidden md:flex items-center space-x-8 pr-8 font-semibold text-lg">
-                        <Link
-                            href="#"
-                            className="text-gray-300 hover:text-aqua transition-colors"
-                        >
-                            About us
-                        </Link>
-                        <Link
-                            href="#"
-                            className="text-gray-300 hover:text-aqua transition-colors"
-                        >
-                            Contact
-                        </Link>
+                        {navLinks.map((link: NavLink, index: number) => (
+                            <Link
+                                key={index}
+                                href={link.href}
+                                className="text-gray-300 hover:text-aqua transition-colors"
+                            >
+                                {link.title}
+                            </Link>
+                        ))}
                     </div>
                 </nav>
             </div>
