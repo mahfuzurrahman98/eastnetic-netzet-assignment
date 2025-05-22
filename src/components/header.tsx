@@ -1,6 +1,7 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Banner } from "./banner";
@@ -16,30 +17,26 @@ export function Header({ announcement }: { announcement: Announcement }) {
                 description={announcement.description}
             />
 
-            <div className="max-w-7xl w-full px-4 md:px-0 mx-auto">
-                {/* Navigation */}
-                <nav className="py-4 md:py-6 flex items-center justify-between">
+            {/* Desktop Navbar */}
+            <div className="max-w-6xl w-full px-4 md:px-0 mx-auto hidden md:block mt-6">
+                <nav className="py-6 flex items-center justify-between">
                     <div className="flex items-center">
-                        <div className="flex items-center cursor-pointer w-[108px] h-[46px] md:w-[173px] md:h-[74px]">
+                        <Link
+                            href="/"
+                            className="flex items-center cursor-pointer w-[173px] h-[74px]"
+                        >
                             <Image
                                 src="/images/logo.svg"
                                 alt="Fametonic Logo"
-                                width={108}
-                                height={46}
+                                width={173}
+                                height={74}
                                 className="w-full h-full"
                             />
-                        </div>
+                        </Link>
                     </div>
 
-                    {/* Mobile menu button */}
-                    <div className="md:hidden">
-                        <button className="text-white p-2">
-                            <Menu size={24} />
-                        </button>
-                    </div>
-
-                    {/* Desktop navigation */}
-                    <div className="hidden md:flex items-center space-x-8 pr-8 font-semibold text-lg">
+                    {/* Desktop navigation links */}
+                    <div className="flex items-center space-x-8 pr-8 font-semibold text-lg">
                         {navLinks.map((link: NavLink, index: number) => (
                             <Link
                                 key={index}
@@ -49,6 +46,35 @@ export function Header({ announcement }: { announcement: Announcement }) {
                                 {link.title}
                             </Link>
                         ))}
+                    </div>
+                </nav>
+            </div>
+
+            {/* Mobile Navbar */}
+            <div className="w-full md:hidden mt-2">
+                <nav className="py-4 px-4 flex items-center justify-between">
+                    <div className="flex-1"></div>{" "}
+                    {/* Empty div for centering */}
+                    {/* Centered Logo */}
+                    <div className="flex-1 flex justify-center">
+                        <Link
+                            href="/"
+                            className="flex items-center cursor-pointer w-[108px] h-[46px]"
+                        >
+                            <Image
+                                src="/images/logo.svg"
+                                alt="Fametonic Logo"
+                                width={108}
+                                height={46}
+                                className="w-full h-full"
+                            />
+                        </Link>
+                    </div>
+                    {/* Mobile menu button */}
+                    <div className="flex-1 flex justify-end">
+                        <button className="text-white p-2">
+                            <Menu size={24} />
+                        </button>
                     </div>
                 </nav>
             </div>

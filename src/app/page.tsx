@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div className="min-h-screen flex flex-col bg-black text-white">
             <Header announcement={announcement} />
-            <main className="flex-1 max-w-7xl mx-auto px-4 md:px-0 pb-10">
+            <main className="flex-1 max-w-6xl mx-auto px-4 md:px-0 pb-10">
                 <Hero featurePoints={featurePoints} />
             </main>
         </div>

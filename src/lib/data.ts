@@ -15,7 +15,7 @@ export const navLinks: NavLink[] = [
 
 // Banner announcement data, think of it as the data coming from the API
 export const announcement: Announcement = {
-    title: "FRESH BEGINNINGS SALE:",
+    title: "FRESH BEGINNINGS SALE",
     description: "Extra 25% OFF, Limited Spots - start your journey today!",
 };
 
