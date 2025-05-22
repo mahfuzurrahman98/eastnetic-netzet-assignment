@@ -15,7 +15,7 @@ const urbanist = Urbanist({
 
 export const metadata: Metadata = {
     title: "Fametonic",
-    description: "",
+    description: "Experience the power of social media marketing",
 };
 
 export default function RootLayout({
