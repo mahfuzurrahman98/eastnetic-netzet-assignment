@@ -26,7 +26,7 @@ export function Hero({ featurePoints }: HeroProps) {
                     {featurePoints.map((feature: string, index: number) => (
                         <div
                             key={index}
-                            className="flex items-start font-medium md:font-semibold text-base leading-[22px]"
+                            className="flex items-center font-medium md:font-semibold text-base leading-[22px]"
                         >
                             <span className="mr-3">✨</span>
                             <p className="text-white ">{feature}</p>
