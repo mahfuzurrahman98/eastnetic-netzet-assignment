@@ -14,7 +14,7 @@ export function Header({ announcement, navLinks }: HeaderProps) {
             <Banner announcement={announcement} />
 
             {/* Desktop Navbar */}
-            <div className="max-w-[1124px] w-full px-4 md:px-0 mx-auto hidden md:block mt-6">
+            <div className="max-w-[1124px] w-full px-4 lg:px-0 mx-auto hidden lg:block mt-6">
                 <nav className="py-6 flex items-start justify-between">
                     <div className="flex items-center">
                         <Link
@@ -47,7 +47,7 @@ export function Header({ announcement, navLinks }: HeaderProps) {
             </div>
 
             {/* Mobile Navbar */}
-            <div className="w-full md:hidden mt-2">
+            <div className="w-full lg:hidden mt-2">
                 <nav className="py-4 px-4 flex items-center justify-between">
                     <div className="flex-1"></div>{" "}
                     {/* Empty div for centering */}
