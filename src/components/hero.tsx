@@ -93,7 +93,7 @@ export function Hero({ featurePoints }: HeroProps) {
             </div>
 
             {/* Right image column */}
-            <div className="md:absolute md:w-[666px] md:h-[679px] md:overflow-hidden md:right-0 md:-top-13">
+            <div className="md:absolute w-full md:w-[666px] md:h-[679px] md:overflow-hidden md:right-0 md:-top-13">
                 <Image
                     src={banner}
                     alt="Fametonic App Dashboard"
